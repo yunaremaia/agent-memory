@@ -1,0 +1,36 @@
+[build-system]
+requires = ["setuptools>=68.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "agent-memory"
+version = "0.1.0"
+description = "Persistent, learnable memory system for AI agents - stores, retrieves, and evolves agent context across sessions"
+readme = "README.md"
+license = {text = "MIT"}
+requires-python = ">=3.11"
+authors = [{name = "Yunaremaia", email = "yunare@gmail.com"}]
+keywords = [
+    "agent",
+    "context-management",
+    "knowledge-management",
+    "memory",
+    "persistence",
+]
+dependencies = []
+
+[project.optional-dependencies]
+dev = ["pytest>=7.0"]
+
+[project.scripts]
+agent-memory = "agent_memory.cli:main"
+
+[project.urls]
+Homepage = "https://github.com/yunaremaia/agent-memory"
+Issues = "https://github.com/yunaremaia/agent-memory/issues"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
