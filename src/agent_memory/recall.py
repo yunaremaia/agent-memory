@@ -33,7 +33,7 @@ from .store import MAX_IMPORTANCE, Memory, MemoryStore
 
 __all__ = ["Recall", "Recaller", "tokenize"]
 
-_TOKEN = re.compile(r"[a-z0-9]+")
+_TOKEN = re.compile(r"[^\W_]+")
 _MAX_TERM_SCORE = 6.0
 _MAX_IMPORTANCE_SCORE = 3.0
 _MAX_REINFORCEMENT_SCORE = 2.0
